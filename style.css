@@ -1,0 +1,246 @@
+/* RESET GLOBAL */
+/* Remove margens padrão e define box-sizing correto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIÁVEIS (facilita manutenção do design) */
+:root {
+    --primary-color: #ff6a00; /* cor principal (laranja) */
+}
+
+/* CONFIGURAÇÃO GLOBAL */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #0f0f0f; /* fundo escuro */
+    color: #fff; /* texto branco */
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden; /* evita scroll lateral bugado */
+}
+
+/* ================= HEADER ================= */
+
+/* Header fixo no topo */
+header {
+    position: fixed; /* fica sempre visível */
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex; /* layout horizontal */
+    justify-content: space-between; /* separa os elementos */
+    align-items: center;
+
+    padding: 15px 40px;
+    z-index: 10; /* fica acima de tudo */
+
+    /* efeito glass (moderno) */
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(10px);
+}
+
+/* Logo / nome */
+.logo {
+    color: var(--primary-color);
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Links do menu */
+nav a {
+    color: #ccc;
+    margin: 0 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Hover nos links */
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Botão do header */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+
+    background: var(--primary-color);
+    color: #fff;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover botão */
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* ================= HERO ================= */
+
+/* Seção principal */
+.hero {
+    width: 100vw; /* ocupa toda largura da tela */
+    height: 100vh; /* ocupa toda altura */
+
+    position: relative;
+    overflow: hidden; /* evita vazamento do vídeo */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ================= VÍDEO ================= */
+
+/* Vídeo de fundo */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover; /* cobre toda a área sem distorcer */
+
+    /* efeito visual opcional */
+    filter: blur(2px); /* deixa mais elegante */
+}
+
+/* ================= OVERLAY ================= */
+
+/* Camada escura sobre o vídeo */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.75); /* escurece o fundo */
+}
+
+/* ================= CONTEÚDO ================= */
+
+/* Container do texto */
+.content {
+    position: relative;
+    z-index: 2; /* fica acima do vídeo */
+
+    max-width: 700px;
+    padding: 20px;
+
+    animation: fadeUp 1.2s ease; /* animação ao carregar */
+}
+
+/* Animação de entrada */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Texto pequeno */
+.content h2 {
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+/* Texto principal */
+.content h1 {
+    font-size: 60px;
+    letter-spacing: 2px;
+}
+
+/* Palavra destacada */
+.content span {
+    color: var(--primary-color);
+}
+
+/* Subtítulo */
+.content h3 {
+    color: #ccc;
+    margin: 15px 0;
+}
+
+/* ================= BOTÕES ================= */
+
+.buttons {
+    margin-top: 25px;
+}
+
+/* Botão principal */
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    padding: 12px 25px;
+
+    color: white;
+    border-radius: 5px;
+
+    margin-right: 10px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover botão principal */
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* Botão secundário */
+.btn-outline {
+    background: transparent;
+    border: 1px solid #fff;
+
+    padding: 12px 25px;
+    color: white;
+
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover botão outline */
+.btn-outline:hover {
+    background: white;
+    color: black;
+}
+
+/* ================= RESPONSIVO ================= */
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        display: none; /* simplifica no mobile (depois fazemos menu) */
+    }
+
+    .content h1 {
+        font-size: 40px;
+    }
+
+    .content h3 {
+        font-size: 16px;
+    }
+}
