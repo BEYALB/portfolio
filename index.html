@@ -6,15 +6,18 @@
     <title>Porfolio</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+
+   
 </head>
-<body>
-    <header>
+<body id="inicio">
+    <header >
         <div class="logo">.BEYMAR</div>
         <nav>
-            <a href="">Home</a>
-            <a href="">Sobre Mim</a>
-            <a href="">Projetos</a>
+            <a href="#inicio">Home</a>
+            <a href="#sobre_min">Sobre Mim</a>
+            <a href="#ferramentas">Habilidades</a>
         </nav>
 
         <button class="btn">
@@ -24,7 +27,7 @@
      <!--  main hero -->
     <main class="hero">
 
-        <video  autoplay loop muted id="bg-video">
+        <video   loop muted id="bg-video">
             <source src="assents/imagens/program-video.mp4" type="video/mp4">
         </video>
         <div class="overlay">
@@ -44,6 +47,175 @@
             </div>
         </div>
     </main>
+
+
+    <section class="about " id="sobre_min">
+     
+
+        <div class="about-text">
+            <h4>SOBRE MIM </h4>
+            <h3> Construindo soluções reais <span>com código & IA</span></h3>
+            <p>
+                Sou estudante de Ciências da Computação e desenvolvedor front-end, com foco em evoluir para Full Stack. Busco uma oportunidade de estágio onde possa contribuir com soluções reais, aprender com a equipe e desenvolver minhas habilidades utilizando boas práticas e tecnologias modernas, incluindo inteligência artificial.
+            </p>
+
+            
+        </div>
+
+       
+
+  
+</section>
+
+
+<section class="tech reveal" id="ferramentas">
+    <h4>Habilidades</h4>
+
+    <h2>Tecnologias & Ferramentas</h2>
+
+    <div class="tech-container">
+
+        <div class="tech-card">
+           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg" />
+            <p>HTML</p>
+        </div>
+
+        <div class="tech-card">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg" />
+            <p>CSS</p>
+        </div>
+
+        <div class="tech-card">
+               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" />
+            <p>JavaScript</p>
+        </div>
+
+        <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+            <p>PHP</p>
+        </div>
+
+        <div class="tech-card">
+            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" />
+          
+            <p>MySQL</p>
+        </div>
+
+        <div class="tech-card">
+            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg" />
+          
+            <p>Git</p>
+        </div>
+
+        <div class="tech-card">
+            
+             
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+          
+          
+          
+            <p>GitHub</p>
+        </div>
+
+        <div class="tech-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+            <p>Java</p>
+        </div>
+
+        <div class="tech-card">
+            <img >
+             <i class="fa-brands fa-openai"></i>
+            <p>Inteligência Artificial</p>
+        </div>
+
+        <div class="tech-card">
+            
+          
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/love2d/love2d-original.svg" />
+          
+          
+            <p>Lovable</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="projects reveal">
+
+    <h2>Meus Projetos</h2>
+
+    <!-- FRONT-END -->
+    <div class="project-category">
+        <h3>Front-end</h3>
+
+        <div class="projects-container">
+
+            <div class="card">
+                <h4>Landing Page</h4>
+                <p>HTML, CSS e JavaScript</p>
+            </div>
+
+            <div class="card">
+                <h4>App Financeiro</h4>
+                <p>Interface interativa com JS</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FULL STACK -->
+    <div class="project-category">
+        <h3>Full Stack (PHP + BD)</h3>
+
+        <div class="projects-container">
+
+            <div class="card">
+                <h4>Sistema de Carros</h4>
+                <p>CRUD com PHP e MySQL</p>
+            </div>
+
+            <div class="card">
+                <h4>Agenda</h4>
+                <p>Sistema com banco de dados</p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+
+<section class="contact reveal">
+
+    <h2>Contato</h2>
+
+    <div class="contact-container">
+
+        <p class="contact-text">
+            Vamos trabalhar juntos 🚀 <br>
+            Entre em contato comigo através das plataformas abaixo:
+        </p>
+
+        <div class="contact-links">
+
+            <a href="#" target="_blank">📧 Email</a>
+            <a href="#" target="_blank">💻 GitHub</a>
+            <a href="#" target="_blank">🔗 LinkedIn</a>
+            <a href="#" target="_blank">📱 WhatsApp</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
     
     <script src="script.js"></script>
 </body>
