@@ -12,6 +12,10 @@
    
 </head>
 <body id="inicio">
+    <!--  para colocar img de fundo -->
+     <div class="bg-animado"></div>
+
+
     <header >
         <div class="logo">.BEYMAR</div>
         <nav>
@@ -27,7 +31,7 @@
      <!--  main hero -->
     <main class="hero">
 
-        <video   loop muted id="bg-video">
+        <video  autoplay loop muted id="bg-video">
             <source src="assents/imagens/program-video.mp4" type="video/mp4">
         </video>
         <div class="overlay">
@@ -42,14 +46,15 @@
        
 
            <div class="buttons">
-              <button class="btn-primary">Meus Projetos</button>
-              <button class="btn-outline">Contato</button>
+              <a href="#projetos"><button class="btn-primary" >Meus Projetos</button></a>
+
+              <a href="#contato"><button class="btn-outline">Contato</button></a>
             </div>
         </div>
-    </main>
-
-
-    <section class="about " id="sobre_min">
+    </main >
+    
+     
+    <section class="about " id="sobre_min" class="secao" >
      
 
         <div class="about-text">
@@ -68,7 +73,7 @@
 </section>
 
 
-<section class="tech reveal" id="ferramentas">
+<section class="tech reveal" id="ferramentas" class="secao">
     <h4>Habilidades</h4>
 
     <h2>Tecnologias & Ferramentas</h2>
@@ -144,7 +149,8 @@
 </section>
 
 
-<section class="projects reveal">
+<section class="projects reveal" id="projetos" class="secao">
+      <h4>Meus trabalhos</h4>
 
     <h2>Meus Projetos</h2>
 
@@ -155,13 +161,33 @@
         <div class="projects-container">
 
             <div class="card">
-                <h4>Landing Page</h4>
-                <p>HTML, CSS e JavaScript</p>
+                <div class="card-image">
+                    <img src="assents/imagens/img-projects/cafeteria.png" alt="" >
+                </div>
+                <h4>Cafeteria</h4>
+                <p>Comece o seu dia com o pé direito. Cafés especiais, blends intensos e aquele aroma que desperta os sentidos. </p>
             </div>
 
             <div class="card">
-                <h4>App Financeiro</h4>
-                <p>Interface interativa com JS</p>
+                <div class="card-image">
+                    <img src="assents/imagens/img-projects/comida.png" alt="" >
+                </div>
+                <h4>Food</h4>
+                <p>Preparamos tudo aqui, com ingredientes selecionados e muito carinho. Venha provar nossas delícias feitas artesanalmente todos os dias.</p>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assents/imagens/img-projects/loja.png" alt="" >
+                </div>
+                <h4>Serviços</h4>
+                <p>A segurança real vai além da reação; ela começa na prevenção. Utilizamos inteligência e sistemas avançados para identificar vulnerabilidades antes que elas se tornem problemas.</p>
+            </div>
+            <div class="card">
+                <div class="card-image">
+                    <img src="assents/imagens/img-projects/calculadora.png" alt="" >
+                </div>
+                <h4>CALC...</h4>
+                <p>Esta calculadora foi projetada para resolver operações fundamentais</p>
             </div>
 
         </div>
@@ -174,13 +200,30 @@
         <div class="projects-container">
 
             <div class="card">
-                <h4>Sistema de Carros</h4>
+                <div class="card-image">
+                    <img src="assents/imagens/img-projects/agenda-img.png" alt="" >
+                </div>
+                <h4>Agenda</h4>
                 <p>CRUD com PHP e MySQL</p>
             </div>
 
             <div class="card">
-                <h4>Agenda</h4>
-                <p>Sistema com banco de dados</p>
+                <div class="card-image">
+                    <img src="assents/imagens/img-projects/cadastro-img.png" alt="" >
+                </div>
+                <h4>Site Cadastro</h4>
+                <p>Sistema com banco de dados MySQL e PHP para cadastro de clientes simples</p>
+            </div>
+
+            <div class="card">
+                <div class="card-image">
+                    <img src="assents/imagens/img-projects/stradina-img.png" alt="" >
+                </div>
+                <h4>Site Stradina</h4>
+                <p>Site desenvolvido com HTML, CSS e PHP <br>
+                    melhorias em processo...
+                    
+                </p>
             </div>
 
         </div>
@@ -190,23 +233,23 @@
 
 
 
-<section class="contact reveal">
+<section class="contact reveal" id="contato" class="secao">
 
-    <h2>Contato</h2>
+    <h4>Contato</h4>
 
     <div class="contact-container">
 
         <p class="contact-text">
-            Vamos trabalhar juntos 🚀 <br>
+            
             Entre em contato comigo através das plataformas abaixo:
         </p>
 
         <div class="contact-links">
 
-            <a href="#" target="_blank">📧 Email</a>
-            <a href="#" target="_blank">💻 GitHub</a>
-            <a href="#" target="_blank">🔗 LinkedIn</a>
-            <a href="#" target="_blank">📱 WhatsApp</a>
+            <a href="mailto:albarezbeymar3@gmail.com" target="_blank"> <i class="fa-regular fa-envelope"></i>Email</a>
+            <a href="https://github.com/BEYALB/BEYALB" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/beymaralb" target="_blank"><i class="fa-brands fa-square-linkedin"></i> LinkedIn</a>
+           
 
         </div>
 

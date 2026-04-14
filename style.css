@@ -19,7 +19,7 @@ html, body {
 }
 
 body {
-    background: #0f0f0f; /* fundo escuro */
+    
     color: #fff; /* texto branco */
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden; /* evita scroll lateral bugado */
@@ -56,7 +56,7 @@ header {
 
 /* Links do menu */
 nav a {
-    color: #ccc;
+    color: white;
     margin: 0 35px;
     font-size: 20px;
     text-decoration: none;
@@ -102,6 +102,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 200px;
 }
 
 /* ================= VÍDEO ================= */
@@ -239,6 +240,55 @@ header.scrolled {
 }
  
 
+/* =================colocando fundo aimado */
+
+/* FUNDO DA CIDADE */
+
+.bg-animado {
+  position: fixed; 
+  top:0;
+  left: 0;
+  width: 120%;
+  height: 130%;
+
+  background: url('assents/imagens/fundo.png') no-repeat center center; 
+  background-size: cover; 
+
+  z-index: -2; 
+
+   transition: transform 0.1s linear;
+}
+
+
+
+.bg-animado {
+  animation: moverFundo 11s linear infinite alternate; 
+  /* ↓ tempo menor = movimento mais perceptível */
+}
+
+
+
+@keyframes moverFundo {
+  0% {
+    transform: translate(0, 0); 
+  }
+  100% {
+    transform: translate(-70px, -80px); 
+  }
+}
+.bg-animado::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* contraste */
+}
+
+
+
+
+
+
+
 
 
 /* ================= SOBRE ================= */
@@ -249,7 +299,7 @@ section{
 }
 .about{
     
-   
+  
    max-width: 800px;
     margin: 0 auto;
     margin-bottom: 100px ;
@@ -289,38 +339,48 @@ section{
 /* TÍTULO */
 .tech h2 {
     font-size: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     color: var(--primary-color);
 }
 
 /* GRID */
 .tech-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+   
 }
 
 /* CARD */
 .tech-card {
+   
     background: #1a1a1a;
     padding: 20px;
     border-radius: 10px;
-    width: 120px;
-
-    transition: 0.3s;
+    width: 200px;
+    transition: 0.5s;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    aspect-ratio: 2/1; /* 👈 mais largo que alto */
+  
 }
 
 /* LOGO */
 .tech-card img {
     width: 50px;
-    margin-bottom: 10px;
+  /* height: 50px; */
+  object-fit: contain;
 }
 
 /* TEXTO */
 .tech-card p {
-    font-size: 14px;
+    font-size: 20px;
+    text-align: center;
+    color: #ccc;
 }
 
 /* HOVER (🔥 efeito top) */
@@ -328,28 +388,12 @@ section{
     transform: translateY(-10px) scale(1.05);
     box-shadow: 0 0 15px rgba(255,106,0,0.5);
 }
-
-/* ================= RESPONSIVO ================= */
-
-/* Ajustes para telas pequenas */
-@media (max-width: 768px) {
-
-    header {
-        padding: 15px 20px;
-    }
-
-    nav {
-        display: none; /* simplifica no mobile (depois fazemos menu) */
-    }
-
-    .content h1 {
-        font-size: 40px;
-    }
-
-    .content h3 {
-        font-size: 16px;
-    }
+.fa-brands{
+    font-size: 50px ;
+    text-align: center;
 }
+
+
 
 
 
@@ -364,12 +408,12 @@ section{
 
 .projects {
     padding: 100px 50px;
-    background: #0f0f0f;
+    width: 100%;
 }
 
 /* TÍTULO PRINCIPAL */
 .projects h2 {
-    text-align: center;
+   
     font-size: 40px;
     margin-bottom: 60px;
     color: var(--primary-color);
@@ -400,9 +444,11 @@ section{
 
 /* GRID DE PROJETOS */
 .projects-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+ 
+    gap: 45px;
 }
 
 /* CARD */
@@ -410,25 +456,41 @@ section{
     background: #1a1a1a;
     padding: 20px;
     border-radius: 10px;
-    width: 280px;
-
-    transition: 0.3s;
+    width: 100%;
+    height: 400px;
+    transition: 0.5s;
     cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+/* IMAGEM */
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px;
+    
+
 }
 
 /* HOVER (🔥 MUITO IMPORTANTE) */
 .card:hover {
-    transform: translateY(-10px) scale(1.03);
+    transform: translateY(-10px) scale(1.09);
 }
 
 /* TEXTO */
 .card h4 {
+    padding: 10px 10px 0px 10px;
     margin-bottom: 10px;
-    color: white;
+    color:var(--primary-color);
 }
 
 .card p {
+    font-size: 15px;
+    padding: 0px 10px 15px 10px;
     color: #aaa;
+    
 }
 .card:hover {
     transform: translateY(-10px) scale(1.03);
@@ -440,14 +502,15 @@ section{
 /* ================= CONTATO ================= */
 
 .contact {
-    padding: 100px 50px;
-    background: #111;
+
+    padding: 0px 50px 80px 50px;
+   
     text-align: center;
 }
 
 /* TÍTULO */
-.contact h2 {
-    font-size: 40px;
+.contact h4 {
+   
     margin-bottom: 30px;
     color: var(--primary-color);
 }
@@ -456,20 +519,20 @@ section{
 .contact-text {
     color: #ccc;
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /* LINKS */
 .contact-links {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 /* BOTÕES DE CONTATO */
 .contact-links a {
-    padding: 12px 25px;
+    padding: 30px 60px;
     background: #1a1a1a;
     border-radius: 8px;
 
@@ -484,7 +547,37 @@ section{
     background: var(--primary-color);
     transform: scale(1.05);
 }
+.fa-brands{
+    font-size: 30px ;
+    text-align: center;
+}
+.fa-regular{
+     font-size: 30px ;
+    text-align: center;
+   
+}
 
 
 
 
+/* ================= RESPONSIVO ================= */
+
+/* Ajustes para telas pequenas */
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    nav {
+        display: none; /* simplifica no mobile (depois fazemos menu) */
+    }
+
+    .content h1 {
+        font-size: 40px;
+    }
+
+    .content h3 {
+        font-size: 16px;
+    }
+}
