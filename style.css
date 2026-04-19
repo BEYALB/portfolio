@@ -562,22 +562,62 @@ section{
 
 /* ================= RESPONSIVO ================= */
 
-/* Ajustes para telas pequenas */
+/* Ajustes para telas pequenas 760 */
 @media (max-width: 768px) {
-
-    header {
-        padding: 15px 20px;
-    }
-
-    nav {
-        display: none; /* simplifica no mobile (depois fazemos menu) */
-    }
-
-    .content h1 {
-        font-size: 40px;
-    }
-
-    .content h3 {
-        font-size: 16px;
-    }
+  main{
+    height: 80vh;
+  }
+  .content h1,p{
+    text-align: center;
+    font-size: 2.5rem;
+    
+  }
+    
+ .about-text p {
+  text-align: justify;
+  hyphens: auto;
 }
+    header nav{
+   position: absolute;
+    top: 50px;
+    right: 0;
+    background: #111;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    width: 100%;
+    transform: translatey(-120%);
+    transition: transform 0.7s ease-in;
+
+    
+    }
+    header nav a{
+        margin: 10px 0;
+    }
+    header nav a:hover{
+        color: black;
+        background: var(--primary-color);
+    }
+    .btn {
+    display: block;
+  }
+  
+  header nav.active{
+    transform: translatey(0);
+  
+    
+  }
+  section{
+    padding: 0px 16px;
+    
+  }
+  .projects-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+  
+}
+
+
