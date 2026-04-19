@@ -641,10 +641,9 @@ section{
 .card p {
   overflow-wrap: break-word;
 } 
-.footer {
+.footer p {
   text-align: center;
-  padding: 20px;
-  font-size: 14px;
+  font-size: 12px;
   color: #aaa;
 }
 
